@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gbf-04-k78">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Find My Location-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapViewDay5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w46-Nd-uRG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="543"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="543" id="DgM-hV-gTc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vOQ-Mh-bbI"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cp8-YX-IrY">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1c-hK-O8C">
+                                        <rect key="frame" x="37" y="8" width="301" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50931919640000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Ghb-cG-dzS"/>
+                                            <constraint firstAttribute="width" constant="301" id="KeA-iW-6yH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Find My Location">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickFindMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7a-N2-o6W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="T1c-hK-O8C" firstAttribute="top" secondItem="cp8-YX-IrY" secondAttribute="topMargin" id="4E3-Tp-bge"/>
+                                    <constraint firstItem="T1c-hK-O8C" firstAttribute="centerX" secondItem="cp8-YX-IrY" secondAttribute="centerX" id="Xqx-ue-yVb"/>
+                                    <constraint firstItem="T1c-hK-O8C" firstAttribute="centerY" secondItem="cp8-YX-IrY" secondAttribute="centerY" id="qqu-e6-IKS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cp8-YX-IrY" secondAttribute="trailing" id="2Xb-jd-3YN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cp8-YX-IrY" secondAttribute="bottom" id="Kb3-Q8-y1V"/>
+                            <constraint firstItem="cp8-YX-IrY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TgK-C8-x0R"/>
+                            <constraint firstItem="w46-Nd-uRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="clq-Ru-AMT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w46-Nd-uRG" secondAttribute="trailing" id="fvZ-SR-xdw"/>
+                            <constraint firstItem="cp8-YX-IrY" firstAttribute="top" secondItem="w46-Nd-uRG" secondAttribute="bottom" id="l2E-ee-RD4"/>
+                            <constraint firstItem="w46-Nd-uRG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mbD-AY-2aP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Find My Location" largeTitleDisplayMode="never" id="beH-PP-CEz">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" style="done" id="Hhf-Ab-dWb">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="w46-Nd-uRG" id="USW-1l-Jof"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yP2-Sa-fUn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dp9-CY-8YC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gbf-04-k78" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ONr-ej-aY5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QDV-C2-sgO"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-218" y="134"/>
+        </scene>
+    </scenes>
+</document>
